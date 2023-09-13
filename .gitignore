@@ -1,7 +1,7 @@
 /vendor/*
 /Tests/env/local/
-/app/config/database.php
-/app/config/config.php
+config/database.php
+config/config.php
 
 composer.lock
 .phpunit.result.cache
