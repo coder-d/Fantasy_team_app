@@ -1,0 +1,17 @@
+{
+    "name": "debanjan/fantasy-team-app",
+    "description": "Fantasy Team Creating Application",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Debanjan\\FantasyTeamApp\\": "app/src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Debanjan",
+            "email": "el_debanjan@yahoo.com"
+        }
+    ],
+    "require": {}
+}
