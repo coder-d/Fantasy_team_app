@@ -1,0 +1,36 @@
+{
+  "name": "fantasy-team-app",
+  "version": "1.0.0",
+  "description": "Fantasy Team Creating Application",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coder-d/Fantasy_team_app.git"
+  },
+  "keywords": [
+    "fantasy",
+    "sports",
+    "team",
+    "application",
+    "(you",
+    "can",
+    "add",
+    "relevant",
+    "keywords)"
+  ],
+  "author": "Debanjan Sengupta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coder-d/Fantasy_team_app/issues"
+  },
+  "homepage": "https://github.com/coder-d/Fantasy_team_app#readme",
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}
