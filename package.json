@@ -31,6 +31,9 @@
   },
   "homepage": "https://github.com/coder-d/Fantasy_team_app#readme",
   "devDependencies": {
+    "@types/jasmine": "^4.3.5",
+    "jasmine": "^5.1.0",
+    "jasmine-core": "^5.1.1",
     "typescript": "^5.2.2"
   }
 }
