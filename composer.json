@@ -4,7 +4,9 @@
     "type": "project",
     "autoload": {
         "psr-4": {
-            "FantasyTeamApp\\": "app/"
+            "FantasyTeamApp\\": "app/",
+            "FantasyTeamApp\\Controllers\\": "app/src/Controllers",
+            "FantasyTeamApp\\Views\\": "app/src/Views"
         }
     },
     "authors": [
