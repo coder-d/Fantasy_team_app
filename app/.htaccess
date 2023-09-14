@@ -1,32 +1,4 @@
-# Disable directory listing
-Options -Indexes
-
-# Enable Rewrite Engine
 RewriteEngine On
-
-# Get the base directory dynamically
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{SCRIPT_FILENAME} -d
-RewriteRule ^(.*[^/])/?$ %{REQUEST_URI}/ [L]
-
-# Define rules for routing requests to index.php
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^ index.php [L]
-
-# Set the default charset to UTF-8
-AddDefaultCharset utf-8
-
-# Set the PHP configuration to handle error reporting
-php_flag display_errors off
-php_flag display_startup_errors off
-php_value error_reporting E_ALL
-
-# Redirect trailing slashes to remove them
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)/$ /$1 [L,R=301]
-
-# Force HTTPS (uncomment these lines if your server uses SSL)
-# RewriteCond %{HTTPS} off
-# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteRule ^ app/index.php [QSA,L]
