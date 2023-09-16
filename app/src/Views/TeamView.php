@@ -4,10 +4,6 @@ namespace FantasyTeamApp\Views;
 
 class TeamView
 {
-<<<<<<< Updated upstream
-    // Implement view rendering logic here
-}
-=======
     public function render(array $team)
     {
         // You can use PHP to generate HTML content here
@@ -31,4 +27,3 @@ class TeamView
         echo '</form>';
     }
 }
->>>>>>> Stashed changes
