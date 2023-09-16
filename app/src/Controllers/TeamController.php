@@ -30,15 +30,22 @@ class TeamController
      *
      * @param string $gameType The type of game (e.g., 'Cricket', 'Football')
      */
-    public function createTeam(string $gameType)
+    public function createTeam(string $gameType, array $players)
     {
-        // Create a game instance using the GameFactory
-        $gameFactory = new GameFactory();
-        $game = $gameFactory->createGame($gameType);
+        // Call the createGame method as a static method
+        $game = GameFactory::createGame($gameType, $players);
 
-        // Define the list of players (sample data)
+        // Sample player data (you can replace this with your actual player data)
         $players = [
-            // Define player data here
+            [
+                'id' => 1,
+                'name' => 'Player 1',
+            ],
+            [
+                'id' => 2,
+                'name' => 'Player 2',
+            ],
+            // Add more players here
         ];
 
         // Register observers (e.g., RecentPerformanceObserver, HistoricalStatisticsObserver)

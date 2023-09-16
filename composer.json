@@ -6,7 +6,9 @@
         "psr-4": {
             "FantasyTeamApp\\": "app/",
             "FantasyTeamApp\\Controllers\\": "app/src/Controllers",
-            "FantasyTeamApp\\Views\\": "app/src/Views"
+            "FantasyTeamApp\\Views\\": "app/src/Views",
+            "FantasyTeamApp\\Game\\": "app/Game",
+            "FantasyTeamApp\\Observers\\": "app/Observers"
         }
     },
     "authors": [

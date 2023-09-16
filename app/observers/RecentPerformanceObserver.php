@@ -2,14 +2,18 @@
 
 namespace FantasyTeamApp\Observers;
 
-class RecentPerformanceObserver
+class RecentPerformanceObserver implements ObserverInterface
 {
+    private $players = [];
+
     public function __construct(array $players = [])
     {
-        // Initialize the observer with player data
-        // ...
+        $this->players = $players;
     }
 
-    // Implement observer logic here
+    public function update()
+    {
+        // Implement observer logic here
+        // This method will be called when the observed subject changes
+    }
 }
-
