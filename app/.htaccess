@@ -1,4 +1,8 @@
+# Enable mod_rewrite
 RewriteEngine On
+RewriteBase /fantasy_team_app/app/
+
+# Redirect all requests to index.php
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^ app/index.php [QSA,L]
+RewriteRule ^(.*)$ index.php [L]

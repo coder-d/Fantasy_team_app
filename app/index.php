@@ -24,16 +24,22 @@ $router->addRoute('GET', '/teams/(\d+)', function ($teamId) {
     echo 'View team with ID: ' . $teamId;
 });
 
+$router->addRoute('GET', '/createTeam', function () {
+    // Handle the creation team view
+    // Instantiate the TeamCreationView and call the render method here
+    $teamCreationView = new FantasyTeamApp\Views\TeamCreationView();
+    $teamCreationView->render();
+});
+
 $router->addRoute('POST', '/createTeam', function () {
     // Handle the creation of a team
     // instantiate the TeamController and call the createTeam method here
+    //
     $teamController = new FantasyTeamApp\Controllers\TeamController(new FantasyTeamApp\Views\TeamView());
     $gameType = $_POST['gameType']; // Assuming gameType is submitted in the form
     $players = $_POST['players']; // Assuming players are submitted in the form
     $teamController->createTeam($gameType, $players);
 });
-
-// Add more routes as needed
 
 // Route the current request
 $router->route();

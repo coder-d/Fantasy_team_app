@@ -6,9 +6,9 @@ class TeamView
 {
     public function render(array $team)
     {
-        // You can use PHP to generate HTML content here
-        echo '<h1>Fantasy Team Selection</h1>';
-        
+        // Start the output buffer to capture content
+        ob_start();
+
         // Check if the team is empty
         if (empty($team)) {
             echo '<p>No team data available.</p>';
@@ -21,9 +21,12 @@ class TeamView
             echo '</ul>';
         }
 
-        echo '<form action="/submit" method="post">';
-        // Add form fields, dynamic data, and logic here
-        echo '<input type="submit" value="Submit Team">';
-        echo '</form>';
+        // End output buffering and capture the content
+        $content = ob_get_clean();
+
+        // Include the template and insert the content
+        include __DIR__ . '/../../../public/templates/template.html';
+
+        // Return the complete HTML
     }
 }

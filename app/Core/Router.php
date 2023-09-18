@@ -18,7 +18,7 @@ class Router
 
     // Match the current request to a route and execute the associated callback
     public function route()
-    {
+    {   
         $requestUri = $_SERVER['REQUEST_URI'];
         $requestMethod = $_SERVER['REQUEST_METHOD'];
         $baseDir = '/app';
@@ -29,13 +29,13 @@ class Router
         // Remove the root and base directory from the request URI
         $requestUri = str_replace($rootDir, '', $requestUri);
         $requestUri = str_replace($baseDir, '', $requestUri);
-
+        
         // Check for the root route ("/")
         if ($requestUri === '/' && $requestMethod === 'GET') {
             $this->executeCallback($this->findRouteForRoot());
             return;
         }
-
+        
         // Check for routes
         foreach ($this->routes as $route) {
             $pattern = $route['pattern'];
