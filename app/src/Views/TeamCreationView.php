@@ -14,7 +14,7 @@ class TeamCreationView
         <div class="row">
             <div class="col-md-6 mx-auto">
                 <h1 class="text-center">Create Your Fantasy Team</h1>
-                <form id="team-creation-form" class="needs-validation" novalidate>
+                <form id="team-creation-form" method="POST" class="needs-validation" novalidate>
                     <!-- Form fields go here -->
                     <div class="form-group">
                         <label for="team-name">Team Name:</label>

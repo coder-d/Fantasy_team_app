@@ -36,8 +36,9 @@ $router->addRoute('POST', '/createTeam', function () {
     // instantiate the TeamController and call the createTeam method here
     //
     $teamController = new FantasyTeamApp\Controllers\TeamController(new FantasyTeamApp\Views\TeamView());
-    $gameType = $_POST['gameType']; // Assuming gameType is submitted in the form
-    $players = $_POST['players']; // Assuming players are submitted in the form
+    $gameType = 'Cricket'; // Assuming gameType is submitted in the form
+    $teamName = $_POST['team-name'] ;
+    $players = []; // Assuming players are submitted in the form
     $teamController->createTeam($gameType, $players);
 });
 

@@ -8,7 +8,7 @@ use FantasyTeamApp\Game\FootballGame;
 class GameFactory
 {
     public static function createGame($gameType, array $players)
-    {
+    {   
         switch ($gameType) {
             case 'Cricket':
                 return new CricketGame($players);
